@@ -26,7 +26,7 @@ data_2 = [
 df_2 = pd.DataFrame(data_2, columns=['Element', 'Atomic Mass', 'Atoms', 'Percent Composition'])
 
 
-# showmol(makeobj(example_xyz, style='stick'), width=1000)
+showmol(makeobj(example_xyz, style='stick'), width=1000)
 
 st.markdown('''Молекула (N) – новый лекарственный препарат для лечения миокардита, индуцированного герпесом 6-го типа, представляющий собой L- лейциновый эфир ацикловира.
 ''')
