@@ -8,19 +8,19 @@ f = open('MolView.mol', "r")
 example_xyz = f.read()
 
 data = [
-    ['Formula', 'C13H22N6O3'],
-    ['Molecular weight', '310.3552 u'],
+    ['Formula', 'C13H20N6O4'],
+    ['Molecular weight', '324.3388 u'],
     ['Hydrogen bond donors', '3'],
-    ['Hydrogen bond acceptors', '4']
+    ['Hydrogen bond acceptors', '5']
 ]
 df = pd.DataFrame(data, columns=['Characteristic', 'Value'])
 
 
 data_2 = [
-    ['C', '12.0107 u', 13, '50.310 %'],
-    ['H', '1.00794 u', 22, '7.1450 %'], 
-    ['N', '14.0067 u', 6, '27.079 %'],
-    ['O', '15.9994 u', 3, '15.466 %']
+    ['C', '12.0107 u', 13, '48.141 %'],
+    ['H', '1.00794 u', 20, '6.2154 %'], 
+    ['N', '14.0067 u', 6, '25.911 %'],
+    ['O', '15.9994 u', 3, '19.732 %']
 ]
 
 df_2 = pd.DataFrame(data_2, columns=['Element', 'Atomic Mass', 'Atoms', 'Percent Composition'])
@@ -44,14 +44,14 @@ st.subheader("Percent Composition")
 st.table(df_2)
 
 st.write("Canonical SMILES")
-st.code("CC(C)CC(N)COCOCn1cnc2C(=O)NC(=Nc12)N")
+st.code("CC(C)CC(N)C(=O)OCOCn1cnc2C(=O)NC(=Nc12)N")
 
 st.write("Isomeric SMILES")
-st.code("O(CN1C2=C(C(=O)N(C(=N2)N([H])[H])[H])N=C1)COCC(CC(C)C)N([H])[H]")
+st.code("C1(=NC2=C(N=CN2COCOC(C(CC(C)C)N([H])[H])=O)C(=O)N1[H])N([H])[H]")
 
 st.write("InChIKey")
-st.code("CAKDPODOBYYLGW-UHFFFAOYSA-N")
+st.code("QIYJTJVDORVJFY-UHFFFAOYSA-N")
 
 st.write("InChI")
-st.code("InChI=1S/C13H22N6O3/c1-8(2)3-9(14)4-21-7-22-6-19-5-16-10-11(19)17-13(15)18-12(10)20/h5,8-9H,3-4,6-7,14H2,1-2H3,(H3,15,17,18,20)")
+st.code("InChI=1S/C13H20N6O4/c1-7(2)3-8(14)12(21)23-6-22-5-19-4-16-9-10(19)17-13(15)18-11(9)20/h4,7-8H,3,5-6,14H2,1-2H3,(H3,15,17,18,20)")
 
